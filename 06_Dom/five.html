@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit or remove html element</title>
+</head>
+<style>
+    * {
+        background-color: #212121;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(langName){
+        const li = document.createElement('li')
+        li.innerText = langName
+
+
+        document.querySelector('ul').appendChild(li) // to adding the element by doing appendChild it traverse complete ul tree and add it in end ,
+        //  if that tree is already long then it can cause optimization issue
+    }
+
+    addlang('python')  // now it will get added in ul
+
+
+    function addOptiLang(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang)) // here not directly added the text by innerhtml or text we append the textNode in li
+        document.querySelector('ul').appendChild(li)
+    }
+
+    addOptiLang('java')
+
+
+    // Edit any value
+
+    const secondLang = document.querySelector('li:nth-child(2)') //selecting second child
+    // secondLang.innerText = 'golang' // this will work but this is not optimized way
+
+    const newli = document.createElement('li')
+    newli.innerText = 'golang'
+
+    // secondLang.replaceWith(newli) // by doing replace with it will do 
+
+    // secondLang.replaceChild(newli) //testing something
+
+
+    // edit
+    // const firstLang = document.querySelector('li:first-child')
+    // firstLang.outerHTML = '<li>typescript</li>'  // another way to edit but this is also not a optimize way
+
+
+    // delete
+    // const lastLang = document.querySelector('li:last-child')
+    // lastLang.remove() // now it will get removed
+
+
+    // major selectors are
+    // querSelector()
+    // createElement()
+    // replaceWith()
+    // remove()
+    // appendChild()
+    // innerHtMl , innerText , textCotent
+
+</script>
+
+</html>

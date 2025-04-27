@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>node lIst</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+</body>
+<script>
+
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children); // by doing .children we will get the html collection of all days
+
+    // console.log(parent.children[1].innerText); // with this we will get the second div
+    
+    // we can apply normal loops in html collection as well
+
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     console.log(parent.children[index].innerText)  // this is how we will get all the values
+        
+    // }
+
+    // console.log(parent.firstElementChild);  // from this we will get the first child element which is 'monday' div
+    // console.log(parent.lastElementChild);  // get the last div of the parent
+
+
+    // if we have any child element and we want to go its parent element then we follow this
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement); // with this will get its parent element
+    
+    // if we want to access the next sibling of the selected element
+    // console.log(dayOne.nextElementSibling); // with this we will get the tuesday
+
+    console.log("Nodes" , parent.childNodes); // it will return nodeList and we can see in nodeList it returns 9 items
+    //  but in our parent we have only 4 divs , but the nodeList is a complex tree structure in its own , it even count space as a node , line break as a node 
+    // and the multiple spaces doesn't count in node it only count one 
+    
+</script>
+</html>

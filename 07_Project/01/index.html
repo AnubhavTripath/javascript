@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project 1</title>
+    <style>
+        .button{
+            height : 100px;
+            width : 100px;
+            display : inline-block;
+            cursor: pointer;
+        }
+        #red{
+            background-color: red;
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+    </style>
+  </head>
+
+  <body style="background-color: #212121; color: #fff;">
+    <h1>Color switch boxes</h1>
+    <span class="button" id="red"></span>
+    <span class="button" id="green"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+  </body>
+
+  <script>
+    const buttons = document.querySelectorAll('.button') // selecting all the buttons , and this is an nodeList
+    const body = document.querySelector('body') // selecting body
+
+    buttons.forEach( (button)=>{
+        // console.log(button) // with this we can see all the buttons in console
+
+        button.addEventListener('click' , (e)=>{
+            // console.log(e.target) // this will give the element which is clicked
+            // console.log(e.target.id) // this will give the id of the element which is clicked
+
+            if(e.target.id === 'red'){
+                body.style.backgroundColor = e.target.id
+            }else if(e.target.id === 'green'){
+                body.style.backgroundColor = e.target.id
+            }else if(e.target.id === 'blue'){
+                body.style.backgroundColor = e.target.id
+            }else if(e.target.id === 'yellow'){
+                body.style.backgroundColor = e.target.id
+            }
+        })
+    })
+  </script>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM part-2</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h2 id="title" class="heading">Learning DOM with hitesh <span style="display: none;">checj</span></h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur sequi id delectus maxime eveniet at numquam nisi est, magnam nemo eaque, earum harum laudantium dolor perferendis minus, repellat tempore?</p>
+    </div>
+
+    <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">green</li>
+        <li class="list-item">red</li>
+    </ul>
+</body>
+
+<script>
+    document.getElementById('title') // this is how we can select any element with their id , with we can get our complete h2 tag and we can access its different element
+    document.getElementById('title').getAttribute('id') // by doing this we can get the attribute and in the getAttribute() we have to pass the key of tha attribute and 
+    // we will gets its value like here we passed key as 'id'
+
+    document.getElementById('title').setAttribute('class' , 'testing') // we can even set the attribute , for setting the attribute we have to pass its key and their value
+    //  and with the above the setAttribute it will override the class heading to testing , we want both then we have to pass the both
+    document.getElementById('title').setAttribute('class' , 'testing heading')
+
+    const heading = document.getElementById('title');
+    heading.style.color = 'red' // this is how we can set the style by selecting any text with the js
+
+
+    // how we can get the content from the element
+
+    heading.innerHTML // with innerhtml we get the any other tag with their styles which will be hidden
+    
+    heading.textContent // with textcontent we even get those text which is hidden
+
+    heading.innerText // with inner text we only get those text which is visible , not hidden
+
+    // html collection
+    document.getElementsByClassName('heading') // from this we can get the html collection
+
+
+    document.querySelector('h2') // from this we can get the first h2
+    document.querySelector('#title') //accessing the id
+    document.querySelector('.heading') //accessing the class
+    document.querySelector('input[type="password"]') // we can even access the select the attribute of any particular element as we can do in the css
+    // all css selector work with the querySelector
+
+
+    // selecting li and changing its bg
+    // document.querySelector('ul')
+   const li =  document.querySelector('ul').querySelector('li') // this is how we can select first li of ul , just like chaining which we learned in maps that multiple operation performed at a time
+    li.style.backgroundColor = "green" // this is how we can set its color
+
+
+    // nodeList
+    const tempLiList = document.querySelectorAll('li') // this will give nodeList , which is not totally an array but have some property of it like forEach()
+    // in nodelist we can not apply properties directly 
+
+    // tempLiList.style.color = "green" // this will not work because its a node list
+    tempLiList[0].style.color = "red" // this will work
+
+    // we can apply forEach function like this to work also
+    tempLiList.forEach( (li)=> {
+        li.style.color = "yellow"
+    })
+
+
+    // HtmlCollection
+
+    const listItem = document.getElementsByClassName('list-item')  // in html collection we could not get the option for amy looping
+    // to apply the loop , mapping we have to convert the html collection in array
+
+    // const convertedList = Array.from(listItem) // now this is converted into the array , and wee can apply the loops
+    // convertedList.forEach((li)=>{
+    //     li.style.backgroundColor = "crimson"
+    // })
+
+    listItem[1].style.backgroundColor = "red" // html collection is a array like propert we can access a single value like this also
+
+</script>
+</html>

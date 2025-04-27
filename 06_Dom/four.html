@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating new element | DOM</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    // we can that div is created 
+    //  and we can add className in it by directly .className , because in nodeList we already saw that each element have all their properties which is not visible in our end because we have not set that propert
+
+    
+    // adding classname
+    div.className = "createdByJs"
+    div.id = "myId"
+    //div.innerHTML = "<h1>Created by javascript</h1>" // this also takes first the reference and then overwrite it
+    div.setAttribute("tittle" , "generated title") // for setting the attribute we have to pass the key and value , with this we can set even the id and class
+    div.style.backgroundColor = "crimson"
+
+    // by doing the (div.id = "myId") it first takes it value of the id and then overwrite it , but by using the .setAttribute() it directly sets the attributes
+
+    //good way to add the text inside the div is this
+    const addtext = document.createTextNode("adding by js throught append");
+
+    div.appendChild(addtext);
+
+    // to attact this div in html
+
+    document.body.appendChild(div)
+</script>
+</html>

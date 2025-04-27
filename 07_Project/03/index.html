@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project 3</title>
+    <style>
+        *{
+            background-color: #212121;
+            color: #fff;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Your Local time</p>
+        <p id="time" style="color: crimson;"></p>
+    </div>
+</body>
+
+<script>
+    const clock = document.getElementById('time')
+
+    // let date = new Date()
+    //console.log(date.toLocaleTimeString()) // prints the time in the console
+
+    setInterval(()=>{
+        const date = new Date()
+        clock.innerHTML = date.toLocaleTimeString()
+    }, 1000)  
+
+    // set interval is a callBack function and takes an interval , and it runs the codes which is written inside it with that time interval
+    // continiously
+
+</script>
+</html>
