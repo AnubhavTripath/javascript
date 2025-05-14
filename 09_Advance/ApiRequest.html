@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Http Request</title>
+</head>
+<body style="background-color: #212121;">
+
+    <!-- below is the procedure of xml http response how we call api using xml http request -->
+
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete. -->
+
+</body>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/AnubhavTripath'
+    const xhr = new XMLHttpRequest() // we did new xmlHttpRequest() because the xmlhttprequest is a kind of class , so we have to make it a object , by using 'new' it take it as a reference to create the object
+    xhr.open('GET' , requestUrl)
+    xhr.onreadystatechange = function(){ // onreadystatechange occurs every time when the state changes
+        console.log(xhr.readyState); // it will print the current state like 1 ,2 ,3 ,4
+        
+        if(xhr.readyState === 4){ // the readystate gives the number on which state is present 
+            //console.log(this.responseText); // this will return the api responses , 'this' is used here to tell the function that i am talking about current context
+            // const data = this.responseText
+            const data = JSON.parse(this.responseText)
+           // console.log(typeof data)  // it is in string format
+            console.log( data)  // it is in string format
+            
+            console.log(data.followers) //this will give the result 'undefined' because the data is in string format which is not accessible by '.'
+        }
+    }
+    xhr.send() // now the request has been send to the git hub api url
+
+
+    //the javasript console is a part of v8 engine on which javascript works and the v8 engine is written in c++
+    // javascript is wrapper of c++ and many languages are same means they are also the wrapper of c++
+    
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inserting key in the body</title>
+</head>
+
+<body>
+    <div id="insert"></div>
+</body>
+
+<script>
+    const insert = document.getElementById("insert");
+    // in this we are inserting a table inside the body which shows the key and its value we are taking it from the event listner
+    window.addEventListener("keydown", function (e) {
+        insert.innerHTML = `
+        <div> 
+            
+            <table>
+
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                    <th>Code</th>
+                    </tr>
+
+                    <tr>
+                        <td>${e.key === " " ? "space" : e.key}</td> 
+                        <td>${e.keyCode}</td>
+                        <td>${e.code}</td>
+                        </tr>
+                </table>
+
+            
+            </div>
+        `;
+    });
+</script>
+
+</html>

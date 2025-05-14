@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    // const intervalId = setInterval(sayDate, 1000, "hi")  // from set interval we can pass the parameter to the function we are calling
+    // // like here we are passing hi to the sayDate function
+
+    // clearInterval(intervalId)
+
+    const div = document.createElement('div'); // Create a div element
+    
+    document.body.appendChild(div); // Append the div to the body
+
+    const sayMYName = function(){
+        const p = document.createElement('p'); // Create a new paragraph element
+        p.innerHTML = `Anubhav ${Date.now()}`;  // Set the content of the paragraph with the timestamp
+        div.appendChild(p); // Append the paragraph to the div
+        console.log("Anubhav", Date.now());
+    }
+
+    // the upper process is carring on again and again so that every second a new paragraph is created and appended to the div
+
+    // console.log(new Date()) // this will give the current date and time
+
+    let intervalId; // Declare intervalId in the outer scope
+
+    document.querySelector('#start').addEventListener('click', function(){
+        if (!intervalId) { // Prevent multiple intervals from being created
+            intervalId = setInterval(sayMYName, 1000); // Start the interval
+        }
+    });
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        if (intervalId) {
+            clearInterval(intervalId); // Stop the interval
+            intervalId = null; // Reset the intervalId
+            console.log("STOPPED");
+        }
+    });
+
+
+</script>
+</html>
