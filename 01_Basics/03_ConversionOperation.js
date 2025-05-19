@@ -60,7 +60,7 @@ let num1, num2, num3
 
 num1 = num2 = num3 = 2 + 2
 
-console.log(num3) // num1 2 and 3 all print 4
+console.log(num3) // num1 num2 and num3 all print 4
 
 let gameCounter = 100
 ++gameCounter;
