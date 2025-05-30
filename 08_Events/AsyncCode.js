@@ -8,7 +8,7 @@
 // callstack , memoryHeap
 
 // each operation waits for the last one to complete before executing
-//  it work next work after completing previous work
+//  it work on next work after completing previous work
 
 
 // blocking code (synchronous)

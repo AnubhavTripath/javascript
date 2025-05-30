@@ -22,6 +22,7 @@ const myArr2 = new Array(1, 2, 3, 4) // this is how we can also create Array
 // const newArr = myArr.join()  // it adds all the element of the array into a string add separate it by ,
 
 // console.log(myArr);
+// console.log(newArr);
 // console.log(typeof newArr); // print string
 
 
@@ -36,7 +37,7 @@ const myArr2 = new Array(1, 2, 3, 4) // this is how we can also create Array
 // console.log("B ", myArr);
 
 
-// const myn2 = myArr.splice(1, 3)  // when we do spice then it will give the complete section which index number we provide including last index number
+// const myn2 = myArr.splice(1, 3)  // when we do splice then it will give the complete section which index number we provide including last index number
 // and also it will remove that particular part from the array
 
 // console.log("C ", myArr);

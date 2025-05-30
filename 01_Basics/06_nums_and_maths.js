@@ -17,10 +17,10 @@ const hundreds = 1000000
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 
 // console.log(Math); // it is an object
-console.log(Math.abs(-4));  // it will give the absolute value of the number which means it will be positive
-console.log(Math.round(4.6)); // it will round the number to the nearest integer
-console.log(Math.ceil(4.2));  // it will give the next integer which is greater than the number
-console.log(Math.floor(4.9));  // it will print 4 
+// console.log(Math.abs(-4));  // it will give the absolute value of the number which means it will be positive
+// console.log(Math.round(4.6)); // it will round the number to the nearest integer
+// console.log(Math.ceil(4.2));  // it will give the next integer which is greater than the number
+// console.log(Math.floor(4.9));  // it will print 4 
 // console.log(Math.min(4, 3, 6, 8));  // it will give the minimum value from the numbers 
 // console.log(Math.max(4, 3, 6, 8));
 
@@ -31,4 +31,4 @@ console.log(Math.floor(4.9));  // it will print 4
 const min = 10
 const max = 20
 
-// console.log(Math.floor(Math.random() * (max - min + 1)) + min)
+// console.log(Math.floor(Math.random() * (max - min + 1)) + min)  //print number between 10 to 20

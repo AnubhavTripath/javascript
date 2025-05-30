@@ -13,7 +13,7 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-console.log(this);  // with this it will empty object in vs code but if we do this in browser then we will get the window object
+console.log(this);  // with 'this' it will print empty object in vs code but if we do this in browser then we will get the window object
 
 
 // three ways to create a function 

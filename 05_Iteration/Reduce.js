@@ -25,6 +25,9 @@ const myTotal = myNums.reduce(function (acc, currval) {
 
 console.log(myTotal);
 
+const total = shoppingCart.reduce((acc , curr)=> {
+    return acc + curr
+} , 0 )
 
 const shoppingCart = [
     {

@@ -35,7 +35,7 @@ function loginUserMessage(username = "sam"){  // by writing = "sam" the default 
     return `${username} just logged in`
 }
 
-console.log(loginUserMessage())
+// console.log(loginUserMessage())
 // console.log(loginUserMessage("hitesh"))
 
 
@@ -54,9 +54,12 @@ function handleObject(anyobject){
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
-// we can  pass the object in a function either create it first then pass it in function
+// we can  pass the object in the function either create it first then pass it in function
 // either we can create the object in the function itself
+
+
 // handleObject(user)
+
 handleObject({
     username: "sam",
     price: 399
@@ -69,4 +72,4 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));
+// console.log(returnSecondValue([200, 400, 500, 1000]));

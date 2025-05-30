@@ -62,11 +62,12 @@ const values = coding.forEach((item)=>{
 const nums = [1 ,2 ,3,4,5,6,7,8,9]
 
 // const num = nums.filter( (num) => num > 4) //returned value in array , this one is done by implicit return
-const num = nums.filter( (num)=>{
-    return num > 4
-})
-console.log(num);
+// const num = nums.filter( (num)=>{
+//     return num > 4
+// })
 
+const num = nums.filter((num)=> num>4 ) //explicit return with filter
+console.log(num);
 
 // to perform same action with forEach we have to create an empty array and push the numbers in it
 

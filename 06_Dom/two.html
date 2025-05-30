@@ -31,7 +31,7 @@
     // we will gets its value like here we passed key as 'id'
 
     document.getElementById('title').setAttribute('class' , 'testing') // we can even set the attribute , for setting the attribute we have to pass its key and their value
-    //  and with the above the setAttribute it will override the class heading to testing , we want both then we have to pass the both
+    //  and with the above the setAttribute it will override the class 'heading' to 'testing' , we want both then we have to pass the both
     document.getElementById('title').setAttribute('class' , 'testing heading')
 
     const heading = document.getElementById('title');
@@ -78,7 +78,7 @@
 
     // HtmlCollection
 
-    const listItem = document.getElementsByClassName('list-item')  // in html collection we could not get the option for amy looping
+    const listItem = document.getElementsByClassName('list-item')  // in html collection we could not get any looping option
     // to apply the loop , mapping we have to convert the html collection in array
 
     // const convertedList = Array.from(listItem) // now this is converted into the array , and wee can apply the loops

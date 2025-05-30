@@ -55,7 +55,7 @@ let result2 = addNum(5 , 6);
 // result1 => 15
 
 
-// due to its new executional conetxt we have to again the memory creation and the executional phase
+// due to its new executional conetxt we have to do again the memory creation and the executional phase
 //  every time a function is called that time a new execution context will be created for that particular function
 
 // for addNum

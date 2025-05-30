@@ -50,9 +50,9 @@ const users = [
 users[1].email
 // console.log(tinderUser);
 
-// console.log(Object.keys(tinderUser));  // by using Object.keys() and passing object in this method then we will get all the keys of the object
-// console.log(Object.values(tinderUser)); // by using Object.values()  and passing the object in this we can get all the values of the object
-// console.log(Object.entries(tinderUser)); // by using entries() we will get every key and value pair of the object
+console.log(Object.keys(tinderUser));  // by using Object.keys() and passing object in this method then we will get all the keys of the object
+console.log(Object.values(tinderUser)); // by using Object.values()  and passing the object in this we can get all the values of the object
+console.log(Object.entries(tinderUser)); // by using entries() we will get every key and value pair of the object
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // by using the hasOwnProperty we can check whether an object is having that variable or not
 

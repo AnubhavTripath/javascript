@@ -1,7 +1,10 @@
-//var c = 300
+// scopes are of two types block scope and global scope
+// block scope will be accessible only inside a block like a function or if statement , but global scope can be accessible anywhere
+
+//var c = 300 // this is a global scope
 let a = 300
 if (true) {
-    let a = 10
+    let a = 10  // this is a block scope
     const b = 20
     // console.log("INNER: ", a);
     
