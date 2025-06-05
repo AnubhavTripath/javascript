@@ -9,6 +9,14 @@
 
 ## Objects
 - collection of properties and methods , properties means those variable and methods means functions . 
+<!-- const user = {
+  name: "Anubhav",        // property
+  age: 25,                // property
+  greet: function () {    // method
+    console.log("Hello!");
+  }
+}; -->
+
 -toLowerCase is a property
 
 ## why we use OOP
