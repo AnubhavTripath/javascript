@@ -16,7 +16,7 @@ const hundreds = 1000000
 
 // +++++++++++++ Maths +++++++++++++++++++++++++++++
 
-// console.log(Math); // it is an object
+console.log(Math); // it is an object
 // console.log(Math.abs(-4));  // it will give the absolute value of the number which means it will be positive
 // console.log(Math.round(4.6)); // it will round the number to the nearest integer
 // console.log(Math.ceil(4.2));  // it will give the next integer which is greater than the number

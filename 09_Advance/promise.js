@@ -2,7 +2,7 @@
 
 //in promise work is not done immediately , it is being set in the queue which will be executed later on certain condition
 
-// pending have three states
+// promise have three states
 // 1. pending
 // 2. fulfilled
 // 3. rejected
@@ -43,17 +43,17 @@
 //third way
 //in this promise we going to see how we pass the value from the promise to the .then() method
 
-// const promise3 = new Promise(function(resolve, reject){
-//     setTimeout(()=>{
-//         console.log("Async task 3 done");
-//         resolve({username: "anubhav" , email: "anu@gmail.com"}); // passing data to the resolve function
-//     },1000)
-// })
+const promise3 = new Promise(function(resolve, reject){
+    setTimeout(()=>{
+        console.log("Async task 3 done");
+        resolve({username: "anubhav" , email: "anu@gmail.com"}); // passing data to the resolve function
+    },1000)
+})
 
-// promise3.then(function(data){ // data will be the resolved value from the promise which we send from the resolve function
-//     console.log("Promise 3 is consumed");
-//     console.log(data); 
-// })
+promise3.then(function(data){ // data will be the resolved value from the promise which we send from the resolve function
+    console.log("Promise 3 is consumed");
+    console.log(data); 
+})
 
 
 
@@ -114,6 +114,16 @@ async function consumePromise5() { // this is the async function which will cons
 }
 
 consumePromise5()
+
+
+// Promise.all([
+//   fetch("/user"),
+//   fetch("/posts"),
+//   fetch("/comments")
+// ]).then(([user, posts, comments]) => {
+//   console.log("All data loaded");
+// });
+
 
 
 

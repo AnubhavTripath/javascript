@@ -19,20 +19,19 @@ console.log(this);  // with 'this' it will print empty object in vs code but if 
 // three ways to create a function 
 
 //1st
-function chai(){
+// function chai(){
+//     let username = "hitesh"
+//     console.log(this.username); // it will print undefined because this will target if it is in an object 
+// }
+
+
+//2nd
+const chai = function () {
     let username = "hitesh"
     console.log(this.username);
 }
 
 chai()
-
-
-//2nd
-// const chai = function () {
-//     let username = "hitesh"
-//     console.log(this.username);
-// }
-
 
 //3rd arrow function
 // const chai =  () => {
@@ -55,7 +54,7 @@ chai()
 const addTwo = (num1, num2) => ({username: "hitesh"}) //to return a object we have to wrap it into a paranthesis
 
 
-console.log(addTwo(3, 4))
+// console.log(addTwo(3, 4))
 
 
 // const myArray = [2, 5, 3, 7, 8]

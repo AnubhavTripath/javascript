@@ -24,25 +24,25 @@
     // }
 
 
-    document.getElementById('owl').addEventListener('click', function(e){ // this is the correct approach
-        console.log(e);
-    //     alert("owl clicked")
-    }, false) // false means event bubbling phase, true means event capturing phase and by default it is false
+    // document.getElementById('owl').addEventListener('click', function(e){ // this is the correct approach
+    //     console.log(e);
+    // //     alert("owl clicked")
+    // }, false) // false means event bubbling phase, true means event capturing phase and by default it is false
     
-    // type, timestamp, defaultPrevented
+    // type, timestamp, preventdefault
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, true)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation() // this will stop the event from bubbling up to the parent element
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+        // e.stopPropagation() // this will stop the event from bubbling up to the parent element
 
-    // }, false)  // if event bubling is on (false) then firstly it will print owl clicked then print "clicked inside the ul", 
+    }, false)  // if event bubling is on (false) then firstly it will print owl clicked then print "clicked inside the ul", 
     // if event bubbling is off (true) then it will print "clicked inside the ul" first then owl clicked
     // bubling will go from bottom to top and capturing will go from top to bottom
 

@@ -22,16 +22,17 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 // "hitesh" => true
 
 let someNumber = 33
+// console.log(typeof (someNumber.toString())) // we can convert it into this way also
 
 let stringNumber = String(someNumber)
-// console.log(stringNumber); // i prints normal 33 bu i was converted it into string
+// console.log(stringNumber); // it prints normal 33 but it was converted it into string
 // console.log(typeof stringNumber);
 
 // *********************** Operations ***********************
 
 let value = 3
 let negValue = -value
-// console.log(negValue);
+// console.log(negValue); // print -3
 
 // console.log(2+2);
 // console.log(2-2);

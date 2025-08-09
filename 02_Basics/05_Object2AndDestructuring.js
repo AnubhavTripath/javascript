@@ -20,17 +20,23 @@ const regularUser = {
 
 // console.log(regularUser.fullname.userfullname.firstname);
 
-const obj1 = {1: "a", 2: "b"}
+const obj1 = {
+    1: "a", 
+    2: "b",
+    10: {
+        5: "d",
+        9: "r"
+    }
+}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 
-const obj3 = { obj1, obj2 } // by this we can add object 1 and 2 in a new object with seprated by a ,
+//const obj3 = { obj1, obj2 } // by this we can add object 1 and 2 in a new object with seprated by a ,
 // const obj3 = Object.assign({}, obj1, obj2, obj4) // by using 'assign' we can add multiple Object in a new Object and it will be in key and value pair
 // the first empty {} is created to target where we want to add all these objects if we do not add an empty {} then it will start adding all objects in first object
 
-// const obj3 = {...obj1, ...obj2}  // by using spread operator also we can add all the objects
-console.log(obj3);
-
+const obj3 = {...obj1, ...obj2}  // by using spread operator also we can add all the objects , but the key 10 will be added asitis because it is itself an object
+// console.log(obj3);
 
 const users = [
     {
@@ -50,9 +56,9 @@ const users = [
 users[1].email
 // console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));  // by using Object.keys() and passing object in this method then we will get all the keys of the object
-console.log(Object.values(tinderUser)); // by using Object.values()  and passing the object in this we can get all the values of the object
-console.log(Object.entries(tinderUser)); // by using entries() we will get every key and value pair of the object
+// console.log(Object.keys(tinderUser));  // by using Object.keys() and passing object in this method then we will get all the keys of the object
+// console.log(Object.values(tinderUser)); // by using Object.values()  and passing the object in this we can get all the values of the object
+// console.log(Object.entries(tinderUser)); // by using entries() we will get every key and value pair of the object in a array [[ 'id', '123abc' ], [ 'name', 'Sammy' ]]
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // by using the hasOwnProperty we can check whether an object is having that variable or not
 

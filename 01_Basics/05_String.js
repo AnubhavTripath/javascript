@@ -5,14 +5,15 @@ const repoCount = 50
 
 // console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
-const gameName = new String('hitesh-hc-com')  // this is an string object
+// const gameName = new String('hitesh-hc-com')  // this is an string object
+const gameName = 'hitesh-hc-com' // this is an string object
 
 // console.log(gameName[0]);
 // console.log(gameName.__proto__); // the __proto__ property is used to access the prototype of an object
 
 
 // console.log(gameName.length);
-// console.log(gameName.toUpperCase());
+console.log(gameName.toUpperCase());
 // console.log(gameName.charAt(2));
 // console.log(gameName.indexOf('t'));
 

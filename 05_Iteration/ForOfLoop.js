@@ -15,7 +15,7 @@ for (const num of arr) {  // here the num is iterator and the 'arr' is object
 
 const greetings = "Hello world!"
 for (const greet of greetings) {
-    // console.log(`Each char is ${greet}`) // it will print even the space between the hello world
+    console.log(`Each char is ${greet}`) // it will print even the space between the hello world
 }
 
 // Maps

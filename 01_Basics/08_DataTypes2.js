@@ -3,7 +3,7 @@
 
 
 //Primitive
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+//  7 types : String, Number, Boolean, null, undefined, Symbol, BigInt
 
 // primmitive data types are call by value it means when we call it anywhere then its origional 
 // memory location is not shared , it is copied and what ever we do the changes it done in the copy

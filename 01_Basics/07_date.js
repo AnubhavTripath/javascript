@@ -16,7 +16,7 @@ let myTimeStamp = Date.now()  // it will give the time stamp in milliseconds fro
 
 // console.log(myTimeStamp);  // it will give the time stamp in milliseconds from 1970 to now
 // console.log(myCreatedDate.getTime()); // in this way we will check that how many miliseconds it takes from 1970 to this myCreateddate and we can compare this timestamp later on
-// console.log(Math.floor(Date.now()/1000));
+console.log(Math.floor(Date.now()/1000));
 
 let newDate = new Date()
 // console.log(newDate);

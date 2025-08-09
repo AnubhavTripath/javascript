@@ -22,7 +22,6 @@ const real_another_array = another_array.flat(Infinity)  // by using flat method
 // console.log(real_another_array);
 
 
-
 // console.log(Array.isArray("Hitesh")) // it will check whether the given value is array or not
 // console.log(Array.isArray([1, 2, 3])) // it will check whether the given value is array or not
 
