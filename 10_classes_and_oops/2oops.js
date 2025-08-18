@@ -1,11 +1,14 @@
 // object literal
+// this is an basic object literal , object literal means a complete basic object , literraly ek object banana
 
-// const user = {  // this is an basic object literal , object literal means a complete basic object
+// const user = {  
 //     username : "anubhav",
 //     account_type : "admin",
 //     getUserDetails: function(){
-//         console.log(this); // it will print complete object
-        
+//         console.log(username); // this will give error that username is undefined 
+//         console.log(this.username);  // this will print fine because as we learned earlier that in execution context when it gets executed that first it will get memory allocated
+            //after that when execution phase starts then for every function a separate execution context will create , in that execution context if we don't tell it that you have to take 
+            // reference of your own key then it will unable to find it
 //     }
 // }
 
@@ -19,18 +22,21 @@
 
 
 
-//constructor fuction
+// topic:- constructor fuction 
 
 // const promiseOne = new Promise()
 // const date = new Date() //here these new keyword are the constructor function
 
 // the use of 'new' keyword is that we can create multiple new instance of the object which helps in eventually saving the memory
 
+// this constructor function more usable when function or object can repeat because the normal object and function are come in non-primitive datatype
+// in which it shares it memory location and if we do changes any then it directly happen in real function
 
 
 function user(username , loginCount , isLoggedIn){
     this.username = username; // we used this because when we printed the 'this' in console in global node js then we have sawn that it printed empty
-    // object {} so by using this.username we can set a username key in that global object
+    // meanwhile everything in js is object function is also object. so by doing this.username we are creating a new username keyword inside this
+    //  function and it know i am talking about this particular function
     this.loginCount = loginCount;
     this.isLoggedIn = isLoggedIn;
 
@@ -45,7 +51,7 @@ function user(username , loginCount , isLoggedIn){
 // console.log(user1); // we can see that user2 completely overwrite the user1 , and we haven't printed the user2 yet also
 
 
-// from saving from this issue we use 'new' keyword it gives the new isntance
+// from saving from this issue we use 'new' keyword it gives the new instance
 
 const user1 = new user('anubhav' , 12, true);  // if we have written new keyword while using the function then we do not need to return 'this' to get the object
 const user2 = new user('anu' ,  11 , false); // both have there separate instance and this comes in constructor

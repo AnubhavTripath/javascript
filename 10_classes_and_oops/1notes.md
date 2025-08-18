@@ -1,3 +1,5 @@
+# does javascript have classes ?
+
 # javascript and classes
 
 <!-- is javascript is having classes , technically it doesn't have any classes -->
@@ -20,9 +22,9 @@
 -toLowerCase is a property
 
 ## why we use OOP
-- for the concept of spegedy code , for the proper structure and avoiding the 
+- for the concept of spegedy code , for the proper structure and avoiding the messy code and unable to understand later
 
-
+## part of OOp
 -contructor function
 - prototype
 - classes

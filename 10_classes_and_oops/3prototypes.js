@@ -8,8 +8,8 @@ const hero = ['anubhav' , 'anurag']
 // along with that we get the prototype in which we get more functionality , inside the protype we will get another prototype
 
 // javascript have prototypal nature , it means if we are applying any property or method to the object then it will go to the prototype and check if it is present there or not
-// if it is not present there then it will go to the parent prototype and check if it is present there or not
-//  javascript haar nhi manti , woh upar upar jati rehti hai agar use koi cheej nhi milti toh , layer (parent) to layer upar jati h 
+// if it is not present there then it will go to the parent prototype and check if it is present there or not 
+//  javascript haar nhi manti , woh upar upar jati rehti hai agar use koi cheej nhi milti toh , layer (parent) to layer upar jati h jabtak use null na mill jaye
 
 
 // the 'new' , 'this' and 'inheritance' these features comes with the protype
@@ -27,10 +27,15 @@ function multiplyBy5(num){
     return num*5
 }
 
-multiplyBy5.power = 2 // adding a property to the function , just like we add property to the object
+multiplyBy5.power = function (){
+    console.log(`the  num is ${this.num}`)
+} // adding a property to the function , just like we add property to the object
+
+// we can only create new instance of the method , which can be inside a function or inside a object and a method is a function inside a object
 
 // console.log(multiplyBy5(5)); // working as usual function
 // console.log(multiplyBy5.power); 
+console.log(new multiplyBy5.power); 
 // console.log(multiplyBy5.prototype); // accesssing the prototype and this will give {} because we are in node
 
 // object is the last parent in the javascript and the js is having protypal behavior means yeh upar upar jati rehti h until unless use mill na jaye jo hamne manga
@@ -45,7 +50,8 @@ function createUser(name, age) {
     // const name = name; // SyntaxError: Identifier 'name' has already been declared
     // const age = age;
     this.name = name; // 'this' refers to the current execution context
-    this.age = age;
+    this.age = (age);
+    // return this  if we are not using the new keyword then return this will send the entire function 
 }
 
 // when the function is internally an object then we can add method to it just like we add properties to the object by using . notation
@@ -56,10 +62,13 @@ function createUser(name, age) {
 createUser.prototype.greet = function() {
     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
 }
-
+const user2 = new createUser('anu', 25)
 const user = new createUser('Anubhav', 25) // creating a new instance of the createUser function
+// without the new keyword if we try to use the property which we injected inside the function then it will give error that this property is not avialable
 // user is now an object with properties name and age, and it has access to the greet method from the prototype
-user.greet()
+
+
+// user.greet()
 
 /*
 

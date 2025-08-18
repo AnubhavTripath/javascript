@@ -1,6 +1,6 @@
 // ES6
 // constructor by using class keyword
-// it is a syntactic sugar for the function constructor
+// it is a syntactic sugar for the function constructor , behind the it is same as prototype , function and object
 // it is a way to create objects in a more readable way
 
 class User {

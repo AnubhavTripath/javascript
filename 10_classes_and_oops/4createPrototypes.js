@@ -61,6 +61,8 @@ const TASupport = {
     __proto__: TeachingSupport  // by using __proto__ we are inheriting the properties of TeachingSupport in  TASupport
 }
 
+console.log(TASupport.isAvailable)
+
 Teacher.__proto__ = User  // this is the other way to inherit properties from User to Teacher, but this is not recommended in modern JavaScript
 // now Teacher will have access to User properties
 
