@@ -3,6 +3,8 @@
 // it is a syntactic sugar for the function constructor , behind the it is same as prototype , function and object
 // it is a way to create objects in a more readable way
 
+
+//it does the same work which is working the "new" keyword
 class User {
     constructor(username, email, password){
         this.username = username;

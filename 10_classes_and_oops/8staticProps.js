@@ -7,7 +7,7 @@ class User {
         console.log(`Username: ${this.username}`);
     }
 
-    static createId(){
+    static createId(){  // by doing static it will be accessed only within block scope
         return `123`
     }
 }

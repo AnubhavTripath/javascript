@@ -34,7 +34,7 @@ multiplyBy5.power = function (){
 // we can only create new instance of the method , which can be inside a function or inside a object and a method is a function inside a object
 
 // console.log(multiplyBy5(5)); // working as usual function
-// console.log(multiplyBy5.power); 
+// console.log(multiplyBy5.power); // prints the num is defined 
 console.log(new multiplyBy5.power); 
 // console.log(multiplyBy5.prototype); // accesssing the prototype and this will give {} because we are in node
 

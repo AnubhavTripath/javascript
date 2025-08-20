@@ -10,7 +10,7 @@ class User {
 
 class Teacher extends User{
     constructor(username, email, password){
-        super(username) // by using the super keyword , we donot need to use 'call' method for running the function and accessing its 
+        super(username) // by using the super keyword , we don't need to use 'call' method for running the function and accessing its 
         //  'this' value
         this.email = email
         this.password = password
