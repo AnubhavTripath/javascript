@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind </title>
+</head>
+<body>
+    <button>Button click</button>
+</body>
+<script>
+    class React { //basic class constructor with the name of react
+        constructor(){
+            this.library = "React"
+            this.server = "localhost:3000"
+
+            //requirement
+            // (requirement is: when this page gets load then create a react object)
+
+            document.querySelector('button')
+                .addEventListener("click" , this.handleClick)
+            
+            
+            document.querySelector('button')
+                .addEventListener("click" , this.handleClick.bind(this)) // now it will have a single "this" 
+
+            // we can do this in this way too
+            this.handleClick = this.handleClick.bind(this);
+
+            document.querySelector('button')
+                .addEventListener("click", this.handleClick);
+
+
+            // when we click on the button then it will print the btn clicked and undefined because it could not able to get the value of server
+            // on console of this it shows that it have the context of button was clicked 
+        }
+        
+
+        handleClick(){
+            console.log("btn clicked")
+            console.log(this.server);
+            console.log(this);
+
+        }
+    }
+
+    // bind ek naya function return karta hai jiska this permanently lock ho jata hai tumhare diye huye object par.
+    // asan bhasa me Tum this ko bol rahe ho: “bhai, chahe mujhe kahin se bhi call karna, tum bas isi object ko hi point karna.
+    // 
+
+
+    const app = new React()
+</script>
+</html>

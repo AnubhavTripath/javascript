@@ -2,22 +2,22 @@
 
 # javascript and classes
 
-<!-- is javascript is having classes , technically it doesn't have any classes -->
+is javascript is having classes , technically it doesn't have any classes
 
-<!-- after ES6 classes is introduced but it is only for syntactic sugar over exisiting prototype-based inheritance mechanism , in other words it provides more familiar sytax for developer which are coming from the class based languages such as C++ , java -->
+after ES6 classes is introduced but it is only for syntactic sugar over exisiting prototype-based inheritance mechanism , in other words it provides more familiar sytax for developer which are coming from the class based languages such as C++ , java
 
 ## OOPs
 
 
 ## Objects
 - collection of properties and methods , properties means those variable and methods means functions . 
-<!-- const user = {
+const user = {
   name: "Anubhav",        // property
   age: 25,                // property
   greet: function () {    // method
     console.log("Hello!");
   }
-}; -->
+};
 
 -toLowerCase is a property
 
