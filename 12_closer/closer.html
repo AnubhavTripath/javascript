@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+    // this comes in lexical scoping , basically the block scope is the lexical scoping
+
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret);
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username);
+    //         console.log(secret);
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username);
+
+
+// closure -----------------------------------------------------
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    // this is useful when we function is returning something which we want to execute like a function , like a function is returning a function a that time
+    // it may taking some values from its parent function at that time woh execution context se hatne se phle memory share karta hai apne pure block scope (lexical scope) ki
+
+    </script>
+    <script>
+        // mannual way to do 
+
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+
+        // with the below function if we use it to change the color then it will be executed immediately without clicking on the btn
+        // function clickHandler(color){
+        //     // document.body.style.backgroundColor = `${color}`
+        // }
+        
+
+
+        // to solve that issue we return a function inside the function in this way it will not execute directly , it will return the function when we click on the color button
+        // this is the example of "closure" that it was sharing the memory of complete lexical scope (block scope) due that reason it knows the color
+        function clickHandler(color){
+
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
