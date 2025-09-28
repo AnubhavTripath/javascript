@@ -1,16 +1,16 @@
 // object literal
 // this is an basic object literal , object literal means a complete basic object , literraly ek object banana
 
-// const user = {  
-//     username : "anubhav",
-//     account_type : "admin",
-//     getUserDetails: function(){
-//         console.log(username); // this will give error that username is undefined 
-//         console.log(this.username);  // this will print fine because as we learned earlier that in execution context when it gets executed that first it will get memory allocated
-            //after that when execution phase starts then for every function a separate execution context will create , in that execution context if we don't tell it that you have to take 
+const user = {  
+    username : "anubhav",
+    account_type : "admin",
+    getUserDetails: function(){
+        console.log(username); // this will give error that username is undefined 
+        console.log(this.username);  // this will print fine because as we learned earlier that in execution context when it gets executed that first it will get memory allocated
+            // after that when execution phase starts then for every function a separate execution context will create , in that execution context if we don't tell it that you have to take 
             // reference of your own key then it will unable to find it
-//     }
-// }
+    }
+}
 
 // the username , account_type these are called the object properties as like in array we have property name .length()
 

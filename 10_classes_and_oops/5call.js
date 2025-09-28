@@ -11,7 +11,8 @@ function createUser(username , email, password) {
     // so after executing the SetUsername function , the execution context and memory which is being reserverd for it is cleared
     //after clearing the reserved memory when try to access it in  current function then it does not have "username" defined
     // so we have to use .call() to hold the reference inwhich it have to store the username not in its own execution context (this)
-    SetUsername.call(this, username); // now it will set the username in the object , and we passed "this" to tell the js that use the current object (current execution context)
+    SetUsername.call(this, username); // now it will set the username in the object , and we passed "this" to tell the js that use the
+    //  current object (current execution context)
     // setUsername marte marte apna username createUser object ke andar set kar dega
 
     this.email = email;

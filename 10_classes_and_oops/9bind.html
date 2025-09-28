@@ -21,14 +21,14 @@
                 .addEventListener("click" , this.handleClick)
             
             
-            document.querySelector('button')
-                .addEventListener("click" , this.handleClick.bind(this)) // now it will have a single "this" 
+            // document.querySelector('button')
+            //     .addEventListener("click" , this.handleClick.bind(this)) // now it will have a single "this" 
 
-            // we can do this in this way too
-            this.handleClick = this.handleClick.bind(this);
+            // // we can do this in this way too
+            // this.handleClick = this.handleClick.bind(this);
 
-            document.querySelector('button')
-                .addEventListener("click", this.handleClick);
+            // document.querySelector('button')
+            //     .addEventListener("click", this.handleClick);
 
 
             // when we click on the button then it will print the btn clicked and undefined because it could not able to get the value of server
@@ -47,6 +47,15 @@
     // bind ek naya function return karta hai jiska this permanently lock ho jata hai tumhare diye huye object par.
     // asan bhasa me Tum this ko bol rahe ho: “bhai, chahe mujhe kahin se bhi call karna, tum bas isi object ko hi point karna.
     // 
+
+
+    // what is actually happening here, if we don't use the bind . here we created a class constructor and inside the constructor we defined 
+    // some variables and we created a function which simply console those variables . and we added the event on the button that when we click
+    // the button run the handleClick function . and for accessing the function inside the constructor we have to use 'this' to tell the js
+    // that i want the handleClick function which is present in this class. but the scene here is the queryselector is taken the reference of
+    // the button and when we are trying to access the variable which is defined inside the constructor will not be accessible . because in 'this'
+    // it have the complete button like this => <button>Button click</button> . so by using the bind and passing (this) we tell the js that
+    // use my current object as a reference
 
 
     const app = new React()

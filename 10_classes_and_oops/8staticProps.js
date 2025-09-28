@@ -13,7 +13,7 @@ class User {
 }
 
 const hitesh = new User("hitesh")
-// console.log(hitesh.createId())  // without static method it can be accessed here , but by using static method it can not be accessed outside the class
+console.log(hitesh.createId())  // without static method it can be accessed here , but by using static method it can not be accessed outside the class
 
 class Teacher extends User {
     constructor(username, email){

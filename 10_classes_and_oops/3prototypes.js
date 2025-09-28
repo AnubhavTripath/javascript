@@ -34,8 +34,8 @@ multiplyBy5.power = function (){
 // we can only create new instance of the method , which can be inside a function or inside a object and a method is a function inside a object
 
 // console.log(multiplyBy5(5)); // working as usual function
-// console.log(multiplyBy5.power); // prints the num is defined 
-console.log(new multiplyBy5.power); 
+// console.log(multiplyBy5.power()); // prints the num is undefined
+// console.log(new multiplyBy5.power); 
 // console.log(multiplyBy5.prototype); // accesssing the prototype and this will give {} because we are in node
 
 // object is the last parent in the javascript and the js is having protypal behavior means yeh upar upar jati rehti h until unless use mill na jaye jo hamne manga
@@ -68,7 +68,7 @@ const user = new createUser('Anubhav', 25) // creating a new instance of the cre
 // user is now an object with properties name and age, and it has access to the greet method from the prototype
 
 
-// user.greet()
+user.greet()
 
 /*
 
