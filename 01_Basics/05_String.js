@@ -13,14 +13,14 @@ const gameName = 'hitesh-hc-com' // this is an string object
 
 
 // console.log(gameName.length);
-console.log(gameName.toUpperCase());
+// console.log(gameName.toUpperCase());
 // console.log(gameName.charAt(2));
 // console.log(gameName.indexOf('t'));
 
 const newString = gameName.substring(0, 4)  // it exclude the last index
 // console.log(newString);
 
-const anotherString = gameName.slice(-8, 4) // it includes the last index and it can take negative values as well
+const anotherString = gameName.slice(0, 4) // it includes the last index and it can take negative values as well
 console.log(anotherString);
 
 const newStringOne = "   hitesh    "

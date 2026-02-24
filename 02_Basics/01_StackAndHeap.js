@@ -9,6 +9,9 @@
 
 //  in non primitive the memory location is shared and in primitive the memory location is not shared
 
+// what exactly happen between stack and heap is that in primitive data type our data is stored in stack but in non-primitive data type
+// our data is stored in heap and their memory location is shared in the stack and when we copy that function or array anywhere then it passes that heap memor location 
+// that's whyn when we do any changes in it then changes in origional one
 
 // primitive data type 
 

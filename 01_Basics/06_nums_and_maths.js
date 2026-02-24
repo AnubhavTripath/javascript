@@ -9,7 +9,7 @@ const balance = new Number(100)
 
 const otherNumber = 123.8966
 
-// console.log(otherNumber.toPrecision(3)); // it will give precise value only when i pass the currect length of the number 
+console.log(otherNumber.toPrecision(3)); // it will give precise value only when i pass the currect length of the number 
 
 const hundreds = 1000000
 // console.log(hundreds.toLocaleString('en-IN'));

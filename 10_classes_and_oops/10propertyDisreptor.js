@@ -19,21 +19,23 @@ const chai = {
     }
 }
 
-// console.log(Object.getOwnPropertyDescriptor(chai, "orderChai"));   // to check the descriptor property we have to pass the particular property or method in it
+console.log(Object.getOwnPropertyDescriptor(chai, "orderChai"));   // to check the descriptor property we have to pass the particular property or method in it
 
 
 //this is how we can define its property of writable or enumerable (enumerable make it eliglble for loops)
 Object.defineProperty(chai, 'name', {
-    //writable: false,
-    enumerable: true,
+    writable: false,
+    enumerable: false,
     
 })
 
-// console.log(Object.getOwnPropertyDescriptor(chai, "name"));
+console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
-for (let [key, value] of Object.entries(chai)) {
-    if (typeof value !== 'function') {
+// this is how we can do loops in the objects
+
+// for (let [key, value] of Object.entries(chai)) {
+//     if (typeof value !== 'function') {
         
-        console.log(`${key} : ${value}`);
-    }
-}
+//         console.log(`${key} : ${value}`);
+//     }
+// }
