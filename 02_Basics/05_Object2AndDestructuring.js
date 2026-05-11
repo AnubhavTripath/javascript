@@ -28,6 +28,8 @@ const obj1 = {
         9: "r"
     }
 }
+
+console.log(Object.entries(obj1));
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 
@@ -60,7 +62,7 @@ users[1].email
 // console.log(Object.values(tinderUser)); // by using Object.values()  and passing the object in this we can get all the values of the object
 // console.log(Object.entries(tinderUser)); // by using entries() we will get every key and value pair of the object in a array [[ 'id', '123abc' ], [ 'name', 'Sammy' ]]
 
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // by using the hasOwnProperty we can check whether an object is having that variable or not
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));  // by using the hasOwnProperty we can check whether an object is having that variable or not
 
 
 const course = {

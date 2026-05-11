@@ -7,7 +7,7 @@ const coding = ["js", "ruby", "java", "python", "cpp"]
 // by using forEach it automatically goes on each indexes of the array and perform the certain action which we write in function
 
 coding.forEach( function (val , indx){ // for each is a callback function means it takes function inside itself , and the fallback function does not have its name
-    console.log(val);
+    // console.log(val);
     // console.log('index' , indx) // these callback function also comes with the index number 
 } )
 
@@ -45,6 +45,10 @@ myCoding.forEach( (item) => {
     
     // console.log(item.languageName);
 } )
+
+myCoding.map((item) => {
+    console.log(item.languageFileName)
+})
 
 
 const values = coding.forEach((item)=>{

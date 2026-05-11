@@ -55,9 +55,10 @@ function addone(num){
 
 
 
-addTwo(5) // but this will give error because we moved the function to a variable 
+addTwo(5) // but this will give error 
 const addTwo = function(num){
     return num + 2
 }
 
+// because first function decleared globally and addTwo is in a variable and variable is not accessible before its defined
 // this thing comes under the hoisting

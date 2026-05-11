@@ -15,7 +15,7 @@ for (const num of arr) {  // here the num is iterator and the 'arr' is object
 
 const greetings = "Hello world!"
 for (const greet of greetings) {
-    console.log(`Each char is ${greet}`) // it will print even the space between the hello world
+    // console.log(`Each char is ${greet}`) // it will print even the space between the hello world
 }
 
 // Maps
@@ -30,14 +30,14 @@ map.set('Fr', "France")
 map.set('IN', "India")
 
 
-// console.log(map);
+console.log(map);
 
-// for (const element of map) {
-//     console.log(element) // we will get the key and value both 
-// }
+for (const element of map) {
+    console.log(element) // we will get the key and value both 
+}
 
 for (const [key, value] of map) { // this is how we can access the key and value of map object
-    // console.log(key, ':-', value);
+    console.log(key, ':-', value);
 }
 
 const myObject = {

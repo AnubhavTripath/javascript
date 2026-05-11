@@ -37,11 +37,11 @@ const newArr = myArr.join()  // it adds all the element of the array into a stri
 // console.log("B ", myArr);
 
 
-// const myn2 = myArr.splice(1, 3)  // when we do splice then it will give the complete section which index number we provide including last index number
+const myn2 = myArr.splice(1, 3)  // when we do splice then it will give the complete section which index number we provide including last index number
 // and also it will remove that particular part from the array
 
-// console.log("C ", myArr);
-// console.log(myn2);
+console.log("C ", myArr);
+console.log(myn2);
 
 
 // in slice it can take negative start and end value but in splice it can take only negative start value 
