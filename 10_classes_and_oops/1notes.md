@@ -25,12 +25,12 @@ const user = {
 - for the concept of spegedy code , for the proper structure and avoiding the messy code and unable to understand later
 
 ## part of OOp
--contructor function
+- contructor function
 - prototype
 - classes
 - Instances (new , this)
 
-# 4 pillars
+## 4 pillars
 Abstraction -- hides the internal details eg fetch() hides the network call
 Encapsulation -- wrap up the data 
 Inheritance -- 

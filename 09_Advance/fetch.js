@@ -13,7 +13,6 @@ const headers = {
 }
 
 fetch('https://api.github.com/users/AnubhavTripath', { headers }) //this is how we can pass headers to the fetch request
-    
 
 // in previous we have seen that fetch get the data faster than other promises that because fetch() which is comes in web Api part have a speciacl Micro task Queue 
 // whom speed is faster also called as (priority queue) .
@@ -40,4 +39,4 @@ fetch('https://api.github.com/users/AnubhavTripath', { headers }) //this is how 
 
 //  the data in first part will have the response from the api and which we are storing the variable name response 
 
-// now thats why we always yse response.data to access the data which we get from the api
+// now thats why we always use response.data to access the data which we get from the api

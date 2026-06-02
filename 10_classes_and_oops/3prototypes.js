@@ -62,6 +62,9 @@ function createUser(name, age) {
 createUser.prototype.greet = function() {
     console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
 }
+
+// this prototype adding in the function , can be done only with the initialization function with 'function(){}' not with arrow function '()=>{}'
+
 const user2 = new createUser('anu', 25)
 const user = new createUser('Anubhav', 25) // creating a new instance of the createUser function
 // without the new keyword if we try to use the property which we injected inside the function then it will give error that this property is not avialable

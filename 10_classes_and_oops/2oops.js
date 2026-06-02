@@ -63,7 +63,7 @@ const user2 = new user('anu' ,  11 , false); // both have there separate instanc
 // and the above we done is properties , variables
 
 function newUser(username){
-    this.username
+    this.username = username
     this.greeting = function(){ // this is the method
         console.log(`hgello ${this.username}`); 
         
